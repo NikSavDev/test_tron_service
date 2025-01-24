@@ -1,8 +1,10 @@
 from tronpy import Tron
 from tronpy.providers import HTTPProvider
 from tronpy.exceptions import AddressNotFound
+from app.config import settings
 
-client = Tron(provider=HTTPProvider(api_key='bc8c5982-6d18-4ff9-b3d3-4b9ff50e8947'))
+
+client = Tron(provider=HTTPProvider(api_key=settings.api_key))
 
 
 def get_wallet_info(addr: str):
